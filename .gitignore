@@ -1,2 +1,5 @@
 /.npmrc
 /.npm
+/node_modules
+/build
+/package-lock.json
