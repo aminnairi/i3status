@@ -19,14 +19,17 @@ const getTime = () => {
 const dispatch = render({
   initialBlocks: [
     {
+      /** @see https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail */
       name: "username",
       full_text: "johndoe"
     },
     {
+      /** @see https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail */
       name: "clock",
       full_text: getTime()
     }
   ],
+  /** @see https://i3wm.org/docs/i3bar-protocol.html#_click_events */
   onEvent: ({event: {name, button}, dispatch}) => {
     if (name === "username" && button === 1) {
       dispatch({

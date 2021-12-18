@@ -61,10 +61,12 @@ const render = createRenderer({
 const dispatch = render({
   initialBlocks: [
     {
+      /** @see https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail */
       name: "bitcoin",
       full_text: ""
     },
     {
+      /** @see https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail */
       name: "username",
       full_text: getUsername()
     }

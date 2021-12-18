@@ -10,6 +10,7 @@ const render = createRenderer({
 render({
   initialBlocks: [
     {
+      /** @see https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail */
       full_text: "Hello, world!"
     }
   ]
