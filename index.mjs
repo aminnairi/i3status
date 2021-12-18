@@ -27,16 +27,6 @@ const createObservable = (initialValue) => {
   };
 };
 
-
-const removeFirst = (character, text) => {
-  if (text.startsWithCharacter) {
-    return text.slice(1);
-  }
-
-  return text;
-};
-
-
 const onLine = (readlineInterface, callback) => {
   readlineInterface.question("").then(line => {
     return callback(line);
