@@ -2,13 +2,13 @@
 
 ## Requirements
 
-- [Git](https://git-scm.com/)
 - [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 - [GNU/Linux](https://en.wikipedia.org/wiki/Linux)
 - [Terminal emulator](https://en.wikipedia.org/wiki/Terminal_emulator)
 - [Text editor](https://en.wikipedia.org/wiki/Text_editor)
-- [Node](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com/)
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
 - [i3wm](https://i3wm.org/)
 
 ## Installation
