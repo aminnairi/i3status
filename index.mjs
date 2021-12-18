@@ -69,11 +69,7 @@ export const createRenderer = ({createInterface, input}) => {
     });
 
     onLine(readlineInterface, line => {
-      const trimmed = line.trim();
-      const withoutLeadingBracket = removeFirst("[", trimmed);
-      const withoutLeadingComma = removeFirst(",", withoutLeadingBracket);
-
-      parseNdjson(withoutLeadingComma).then(event => {
+      parseNdjson(line.trim()).then(event => {
         onEvent({event, dispatch});
       }).catch(() => {});
     });
