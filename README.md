@@ -2,7 +2,8 @@
 
 i3wm status bar written in Node.js using the Flux architecture.
 
-![Status bar exemple](https://user-images.githubusercontent.com/18418459/146652516-f064b58e-0f32-4fdc-adba-20f0edab9743.png)
+![Status Bar](https://user-images.githubusercontent.com/18418459/146653832-246fe8e9-b680-47ac-8c90-6fe7fbf1a121.png)
+
 
 ## Requirements
 
