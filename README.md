@@ -61,3 +61,15 @@ i3-msg reload
 ## Examples
 
 See [`examples`](./examples).
+
+## Contributing
+
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
+## Code of conduct
+
+See [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md).
+
+## License
+
+See [`LICENSE`](./LICENSE).
