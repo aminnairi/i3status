@@ -69,4 +69,3 @@ export const createRenderer = ({createInterface, input}) => {
     return dispatch;
   };
 };
-
