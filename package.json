@@ -1,0 +1,34 @@
+{
+  "author": {
+    "name": "Amin NAIRI",
+    "url": "https://github.com/aminnairi"
+  },
+  "bugs": {
+    "url": "https://github.com/aminnairi/i3status/issues"
+  },
+  "description": "Library to create your own i3 status bar in Node.js using the Flux architecture",
+  "engines": {
+    "node": ">=17.0.0"
+  },
+  "files": [
+    "build/index.mjs"
+  ],
+  "homepage": "https://github.com/aminnairi/i3status#readme",
+  "keywords": [
+    "i3",
+    "status",
+    "bar",
+    "i3status",
+    "i3bar",
+    "i3statusbar",
+    "i3barstatus",
+    "flux"
+  ],
+  "license": "GPL-3.0-or-later",
+  "main": "build/index.mjs",
+  "name": "@aminnairi/i3status",
+  "os": [
+    "linux"
+  ],
+  "version": "0.1.0"
+}
