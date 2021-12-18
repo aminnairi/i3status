@@ -1,6 +1,6 @@
 import {createInterface} from "readline/promises";
 import {stdin as input} from "process";
-import {createRenderer} from "../index.mjs";
+import {createRenderer} from "@aminnairi/i3status";
 
 const render = createRenderer({
   createInterface,

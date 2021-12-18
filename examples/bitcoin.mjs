@@ -2,7 +2,7 @@ import {userInfo} from "os";
 import {createInterface} from "readline/promises";
 import {stdin as input} from "process";
 import {request} from "https";
-import {createRenderer} from "../index.mjs";
+import {createRenderer} from "@aminnairi/i3status";
 
 const ignore = () => {};
 

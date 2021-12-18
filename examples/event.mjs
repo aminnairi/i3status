@@ -1,6 +1,5 @@
 import {createInterface} from "readline/promises";
 import {stdin as input} from "process";
-import {userInfo} from "os";
 import {createRenderer} from "@aminnairi/i3status";
 
 const render = createRenderer({
@@ -17,35 +16,45 @@ const getTime = () => {
   return `${hours}:${minutes}:${seconds}`;
 };
 
-const getUsername = () => {
-  const userInformations = userInfo();
-
-  if (!Object.prototype.hasOwnProperty.call(userInformations, "username")) {
-    return "unknown";
-  }
-
-  const {username} = userInformations;
-
-  if (typeof username !== "string") {
-    return "unknown";
-  }
-
-  return username;
-};
-
 const dispatch = render({
   initialBlocks: [
     {
-      name: "clock",
-      full_text: getTime()
+      name: "username",
+      full_text: "johndoe"
     },
     {
-      name: "username",
-      full_text: getUsername()
+      name: "clock",
+      full_text: getTime()
     }
   ],
+  onEvent: ({event: {name, button}, dispatch}) => {
+    if (name === "username" && button === 1) {
+      dispatch({
+        name: "USERNAME_TOGGLE_FULL_TEXT"
+      });
+    }
+  },
   onDispatch: ({blocks, action: {name, payload}}) => {
     switch (name) {
+      case "USERNAME_TOGGLE_FULL_TEXT":
+        return blocks.map(block => {
+          if (block.name !== "username") {
+            return block;
+          }
+
+          if (block.full_text === "johndoe") {
+            return {
+              ...block,
+              full_text: "doejohn"
+            };
+          }
+
+          return {
+            ...block,
+            full_text: "johndoe"
+          };
+        });
+
       case "CLOCK_SET_FULL_TEXT":
         return blocks.map(block => {
           if (block.name !== "clock") {
@@ -69,4 +78,4 @@ setInterval(() => {
     name: "CLOCK_SET_FULL_TEXT",
     payload: getTime()
   });
-}, 1000);
+}, 1000 * 5);
