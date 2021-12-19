@@ -16,6 +16,16 @@ jobs:
         run: docker-compose run --rm --user root -T npm install
       - name: Build
         run: docker-compose run --rm --user root -T npm run build
+      - name: Pack
+        run: docker-compose run --rm --user root -T npm pack
+      - name: LICENSE check
+        run: 'tar -tf *.tgz | grep "^package/LICENSE$"'
+      - name: package.json check
+        run: 'tar -tf *.tgz | grep "^package/package.json$"'
+      - name: README.md check
+        run: 'tar -tf *.tgz | grep "^package/README.md$"'
+      - name: index.mjs check
+        run: 'tar -tf *.tgz | grep "^package/build/index.mjs$"'
       - name: Environment
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.TOKEN }}" > .npmrc
       - name: Publish
