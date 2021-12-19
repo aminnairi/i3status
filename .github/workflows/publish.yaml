@@ -1,0 +1,22 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  publish:
+    name: Publish the package on the NPM registry
+    runs-on: ubuntu.20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Dependencies installation
+        run: docker-compose run --rm --user root -T npm install
+      - name: Build
+        run: docker-compose run --rm --user root -T npm run build
+      - name: Environment
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.TOKEN }}" > .npmrc
+      - name: Publish
+        run: 'docker-compose run --rm --user root -T npm publish --access public || true'
