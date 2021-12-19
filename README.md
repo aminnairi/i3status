@@ -1,6 +1,8 @@
 # @aminnairi/i3status
 
-i3wm status bar written in Node.js using the Flux architecture.
+[![Bundle size](https://badgen.net/bundlephobia/minzip/@aminnairi/i3status)](https://bundlephobia.com/package/@aminnairi/i3status)
+
+Library to create your own i3 status bar in Node.js using the Flux architecture
 
 ![Status Bar](https://user-images.githubusercontent.com/18418459/146653832-246fe8e9-b680-47ac-8c90-6fe7fbf1a121.png)
 
