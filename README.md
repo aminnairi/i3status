@@ -1,6 +1,6 @@
 # @aminnairi/i3status
 
-[![Bundle size](https://badgen.net/bundlephobia/minzip/@aminnairi/i3status)](https://bundlephobia.com/package/@aminnairi/i3status)
+[![Bundle size](https://badgen.net/bundlephobia/minzip/@aminnairi/i3status)](https://bundlephobia.com/package/@aminnairi/i3status) ![Vulnerabilities count](https://badgen.net/snyk/aminnairi/i3status)
 
 Library to create your own i3 status bar in Node.js using the Flux architecture
 
