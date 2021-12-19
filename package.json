@@ -26,6 +26,7 @@
   ],
   "license": "GPL-3.0-or-later",
   "main": "build/index.mjs",
+  "module": "build/index.mjs",
   "name": "@aminnairi/i3status",
   "os": [
     "linux"
