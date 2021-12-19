@@ -17,6 +17,7 @@ None.
 #### Minor changes
 
 - Package publishing is now automated ([#10](https://github.com/aminnairi/i3status/pull/10))
+- New feature for having a bundle size badge ([#5](https://github.com/aminnairi/i3status/issues/5))
 
 #### Bug & security fixes
 
