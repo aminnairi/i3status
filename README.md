@@ -65,16 +65,16 @@ i3-msg reload
 
 ## Examples
 
-See [`examples`](./examples).
+See [`examples`](https://github.com/aminnairi/i3status/examples).
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+See [`CONTRIBUTING.md`](https://github.com/aminnairi/i3status/CONTRIBUTING.md).
 
 ## Code of conduct
 
-See [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md).
+See [`CODE_OF_CONDUCT.md`](https://github.com/aminnairi/i3status/CODE_OF_CONDUCT.md).
 
 ## License
 
-See [`LICENSE`](./LICENSE).
+See [`LICENSE`](https://github.com/aminnairi/i3status/LICENSE).
