@@ -17,7 +17,9 @@ None.
 #### Minor changes
 
 - Package publishing is now automated ([#10](https://github.com/aminnairi/i3status/pull/10))
-- New feature for having a bundle size badge ([#5](https://github.com/aminnairi/i3status/issues/5))
+- Added a vulnerability badge ([#12](https://github.com/aminnairi/i3status/pull/12))
+- Added a badge for the linking the npm package ([#13](https://github.com/aminnairi/i3status/pull/13))
+- Added a bundle size badge ([#11](https://github.com/aminnairi/i3status/pull/11))
 
 #### Bug & security fixes
 
