@@ -1,6 +1,6 @@
 import {userInfo} from "os";
 import {createInterface} from "readline/promises";
-import {stdin as input} from "process";
+import {stdin as input, stdout as output} from "process";
 import {request} from "https";
 import {createRenderer} from "@aminnairi/i3status";
 
@@ -55,7 +55,8 @@ const getUsername = () => {
 
 const render = createRenderer({
   createInterface,
-  input
+  input,
+  output
 });
 
 const dispatch = render({
