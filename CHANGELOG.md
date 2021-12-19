@@ -2,12 +2,27 @@
 
 ## Summary
 
+- [`1.0.1`](#101)
 - [`1.0.0`](#100)
 - [`0.2.0`](#020)
 - [`0.1.1`](#011)
 - [`0.1.0`](#010)
 
 ## Versions
+
+### 1.0.1
+
+#### Major changes
+
+None.
+
+#### Minor changes
+
+None.
+
+#### Bug & security fixes
+
+- Fixed an issue affecting the output of the status bar ([#17](https://github.com/aminnairi/i3status/pull/17))
 
 ### 1.0.0
 
