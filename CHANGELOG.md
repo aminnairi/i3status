@@ -2,11 +2,26 @@
 
 ## Summary
 
+- [`1.0.0`](#100)
 - [`0.2.0`](#020)
 - [`0.1.1`](#011)
 - [`0.1.0`](#010)
 
 ## Versions
+
+### 1.0.0
+
+#### Major changes
+
+- Side effect free ([#15](https://github.com/aminnairi/i3status/pull/15))
+
+#### Minor changes
+
+None.
+
+#### Bug & security fixes
+
+None.
 
 ### 0.2.0
 
