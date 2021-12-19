@@ -37,15 +37,20 @@ const onLine = (readlineInterface, callback) => {
 
 const parseNdjson = async (text) => JSON.parse(text.slice(1));
 
-export const createRenderer = ({createInterface, input}) => {
+export const createRenderer = ({createInterface, input, output}) => {
   return ({initialBlocks, onDispatch, onEvent}) => {
     const observableBlocks = createObservable([]);
 
-    console.log(JSON.stringify({version: 1, click_events: true}));
-    console.log("[");
+    const readlineInterface = createInterface({
+      input,
+      output
+    });
+
+    readlineInterface.write(JSON.stringify({version: 1, click_events: true}) + "\n");
+    readlineInterface.write("[\n");
 
     observableBlocks.observe(blocks => {
-      console.log(JSON.stringify(blocks) + ",");
+      readlineInterface.write(JSON.stringify(blocks) + ",\n");
     });
 
     const dispatch = ({name, payload}) => {
@@ -53,10 +58,6 @@ export const createRenderer = ({createInterface, input}) => {
         return onDispatch({blocks, action: {name, payload}});
       });
     };
-
-    const readlineInterface = createInterface({
-      input
-    });
 
     onLine(readlineInterface, line => {
       parseNdjson(line.trim()).then(event => {
