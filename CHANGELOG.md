@@ -2,10 +2,25 @@
 
 ## Summary
 
+- [`0.2.0`](#020)
 - [`0.1.1`](#011)
 - [`0.1.0`](#010)
 
 ## Versions
+
+### 0.2.0
+
+#### Major changes
+
+None.
+
+#### Minor changes
+
+- Package publishing is now automated ([#10](https://github.com/aminnairi/i3status/pull/10))
+
+#### Bug & security fixes
+
+None.
 
 ### 0.1.1
 
