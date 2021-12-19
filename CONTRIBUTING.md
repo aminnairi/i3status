@@ -17,3 +17,15 @@
 git clone https://github.com/aminnairi/i3status ~/i3status
 cd ~/i3status
 ```
+
+## Dependencies installation
+
+```bash
+docker-compose run --rm npm install
+```
+
+## Test
+
+```bash
+docker-compose run --rm npm test
+```
