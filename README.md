@@ -32,12 +32,13 @@ Open the created file `index.mjs` and copy/paste the following block of code int
 
 ```javascript
 import {createInterface} from "readline/promises";
-import {stdin as input} from "process";
+import {stdin as input, stdout as output} from "process";
 import {createRenderer} from "@aminnairi/i3status";
 
 const render = createRenderer({
   createInterface,
-  input
+  input,
+  output
 });
 
 render({
