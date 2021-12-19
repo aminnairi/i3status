@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - development
+  push:
+    branches:
+      - development
+
+jobs:
+  test:
+    name: Test that the library is working as intended
+    runs-on: ubuntu.20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Dependencies installation
+        run: docker-compose run --rm --user root -T npm install
+      - name: Test
+        run: docker-compose run --rm --user root -T npm test
