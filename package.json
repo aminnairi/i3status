@@ -24,6 +24,7 @@
     "i3barstatus",
     "flux"
   ],
+  "sideEffects": false,
   "license": "GPL-3.0-or-later",
   "main": "build/index.mjs",
   "module": "build/index.mjs",
