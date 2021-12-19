@@ -42,15 +42,14 @@ export const createRenderer = ({createInterface, input, output}) => {
     const observableBlocks = createObservable([]);
 
     const readlineInterface = createInterface({
-      input,
-      output
+      input
     });
 
-    readlineInterface.write(JSON.stringify({version: 1, click_events: true}) + "\n");
-    readlineInterface.write("[\n");
+    output.write(JSON.stringify({version: 1, click_events: true}));
+    output.write("[");
 
     observableBlocks.observe(blocks => {
-      readlineInterface.write(JSON.stringify(blocks) + ",\n");
+      output.write(JSON.stringify(blocks) + ",");
     });
 
     const dispatch = ({name, payload}) => {
