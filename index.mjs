@@ -29,8 +29,7 @@ const createObservable = (initialValue) => {
 
 const onLine = (readlineInterface, callback) => {
   readlineInterface.question("").then(line => {
-    return callback(line);
-  }).finally(() => {
+    callback(line);
     onLine(readlineInterface, callback);
   });
 };
