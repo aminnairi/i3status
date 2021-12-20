@@ -1,6 +1,6 @@
 # @aminnairi/i3status
 
-[![NPM badge](https://badgen.net/npm/v/@aminnairi/i3status)](https://www.npmjs.com/package/@aminnairi/i3status) [![Bundle size](https://badgen.net/bundlephobia/minzip/@aminnairi/i3status@1.0.1)](https://bundlephobia.com/package/@aminnairi/i3status@1.0.1) [![Tree shaking support](https://badgen.net/bundlephobia/tree-shaking/@aminnairi/i3status@1.0.1)](https://bundlephobia.com/package/@aminnairi/i3status@1.0.1) ![Vulnerabilities count](https://badgen.net/snyk/aminnairi/i3status)
+[![NPM badge](https://badgen.net/npm/v/@aminnairi/i3status)](https://www.npmjs.com/package/@aminnairi/i3status/v/1.0.1) [![Bundle size](https://badgen.net/bundlephobia/minzip/@aminnairi/i3status@1.0.1)](https://bundlephobia.com/package/@aminnairi/i3status@1.0.1) [![Tree shaking support](https://badgen.net/bundlephobia/tree-shaking/@aminnairi/i3status@1.0.1)](https://bundlephobia.com/package/@aminnairi/i3status@1.0.1) ![Vulnerabilities count](https://badgen.net/snyk/aminnairi/i3status)
 
 Library to create your own i3 status bar in Node.js using the Flux architecture
 
