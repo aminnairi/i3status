@@ -68,6 +68,10 @@ i3-msg reload
 
 See [`examples`](https://github.com/aminnairi/i3status/tree/production/examples).
 
+## Changelog
+
+See [`CHANGELOG.md`](https://github.com/aminnairi/i3status/tree/production/CHANGELOG.md).
+
 ## Contributing
 
 See [`CONTRIBUTING.md`](https://github.com/aminnairi/i3status/tree/production/CONTRIBUTING.md).
