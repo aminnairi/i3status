@@ -36,7 +36,7 @@ const dispatch = render({
     if (name === "datetime" && button === 1 && modifiers.length === 0) {
       dispatch({
         name: "TOGGLE_DATETIME_STATE",
-        payload: ""
+        payload: null
       });
     }
   },
