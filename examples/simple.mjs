@@ -2,6 +2,8 @@ import {createInterface} from "readline/promises";
 import {stdin as input, stdout as output} from "process";
 import {createRenderer} from "@aminnairi/i3status";
 
+// SETUP
+
 const render = createRenderer({
   createInterface,
   input,

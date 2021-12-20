@@ -3,9 +3,13 @@ import {createInterface} from "readline/promises";
 import {stdin as input, stdout as output} from "process";
 import {createRenderer} from "@aminnairi/i3status";
 
+// HELPERS
+
 const getDate = () => new Date().toLocaleDateString("en-US");
 const getTime = () => new Date().toLocaleTimeString("en-US");
 const getUsername = () => userInfo().username;
+
+// SETUP
 
 const render = createRenderer({
   createInterface,
@@ -16,15 +20,18 @@ const render = createRenderer({
 const dispatch = render({
   initialBlocks: [
     {
+      /** @see https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail */
       state: "date",
       name: "datetime",
       full_text: getDate()
     },
     {
+      /** @see https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail */
       name: "username",
       full_text: getUsername()
     }
   ],
+  /** @see https://i3wm.org/docs/i3bar-protocol.html#_click_events */
   onEvent: ({event: {name, button, modifiers, x, y, relative_y, relative_y, output_x, output_y, width, height}, dispatch}) => {
     if (name === "datetime" && button === 1 && modifiers.length === 0) {
       dispatch({
@@ -80,6 +87,8 @@ const dispatch = render({
     }
   }
 });
+
+// INTERVALS
 
 setInterval(() => {
   dispatch({

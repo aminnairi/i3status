@@ -3,6 +3,8 @@ import {createInterface} from "readline/promises";
 import {stdin as input, stdout as output} from "process";
 import {createRenderer} from "@aminnairi/i3status";
 
+// HELPERS
+
 const getCpus = () => {
   const allCpus = cpus();
   const count = allCpus.length;
@@ -10,6 +12,8 @@ const getCpus = () => {
 
   return `${count} CPUs ${speed}GHz`;
 };
+
+// SETUP
 
 const render = createRenderer({
   createInterface,
@@ -20,6 +24,7 @@ const render = createRenderer({
 const dispatch = render({
   initialBlocks: [
     {
+      /** @see https://i3wm.org/docs/i3bar-protocol.html#_blocks_in_detail */
       name: "cpus",
       full_text: getCpus()
     }
