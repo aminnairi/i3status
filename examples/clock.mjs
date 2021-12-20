@@ -3,36 +3,14 @@ import {stdin as input, stdout as output} from "process";
 import {userInfo} from "os";
 import {createRenderer} from "@aminnairi/i3status";
 
+const getTime = () => new Date().toLocaleTimeString("en-US");
+const getUsername = () => userInfo().username;
+
 const render = createRenderer({
   createInterface,
   input,
   output
 });
-
-const getTime = () => {
-  const date = new Date();
-  const hours = date.getHours().toString().padStart(2, "0");
-  const minutes = date.getMinutes().toString().padStart(2, "0");
-  const seconds = date.getSeconds().toString().padStart(2, "0");
-
-  return `${hours}:${minutes}:${seconds}`;
-};
-
-const getUsername = () => {
-  const userInformations = userInfo();
-
-  if (!Object.prototype.hasOwnProperty.call(userInformations, "username")) {
-    return "unknown";
-  }
-
-  const {username} = userInformations;
-
-  if (typeof username !== "string") {
-    return "unknown";
-  }
-
-  return username;
-};
 
 const dispatch = render({
   initialBlocks: [
