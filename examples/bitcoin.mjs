@@ -4,6 +4,8 @@ import {stdin as input, stdout as output} from "process";
 import {request} from "https";
 import {createRenderer} from "@aminnairi/i3status";
 
+// HELPERS
+
 const ignore = () => {};
 
 const getBitcoinPrice = () => {
@@ -38,6 +40,8 @@ const getBitcoinPrice = () => {
 };
 
 const getUsername = () => userInfo().username;
+
+// SETUP
 
 const render = createRenderer({
   createInterface,
@@ -78,12 +82,16 @@ const dispatch = render({
   }
 });
 
+// INITIALIZATION
+
 getBitcoinPrice().then(price => {
   dispatch({
     name: "BITCOIN_SET_FULL_TEXT",
     payload: price
   });
 }).catch(ignore);
+
+// INTERVALS
 
 setInterval(() => {
   getBitcoinPrice().then(price => {

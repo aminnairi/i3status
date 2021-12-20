@@ -3,8 +3,12 @@ import {stdin as input, stdout as output} from "process";
 import {userInfo} from "os";
 import {createRenderer} from "@aminnairi/i3status";
 
+// HELPERS
+
 const getTime = () => new Date().toLocaleTimeString("en-US");
 const getUsername = () => userInfo().username;
+
+// SETUP
 
 const render = createRenderer({
   createInterface,
@@ -44,6 +48,8 @@ const dispatch = render({
     }
   }
 });
+
+// INTERVALS
 
 setInterval(() => {
   dispatch({

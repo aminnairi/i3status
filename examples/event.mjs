@@ -2,11 +2,7 @@ import {createInterface} from "readline/promises";
 import {stdin as input, stdout as output} from "process";
 import {createRenderer} from "@aminnairi/i3status";
 
-const render = createRenderer({
-  createInterface,
-  input,
-  output
-});
+// HELPERS
 
 const getTime = () => {
   const date = new Date();
@@ -16,6 +12,14 @@ const getTime = () => {
 
   return `${hours}:${minutes}:${seconds}`;
 };
+
+// SETUP
+
+const render = createRenderer({
+  createInterface,
+  input,
+  output
+});
 
 const dispatch = render({
   initialBlocks: [
@@ -76,6 +80,8 @@ const dispatch = render({
     }
   }
 });
+
+// INTERVALS
 
 setInterval(() => {
   dispatch({
