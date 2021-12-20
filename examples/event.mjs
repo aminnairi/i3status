@@ -31,8 +31,8 @@ const dispatch = render({
     }
   ],
   /** @see https://i3wm.org/docs/i3bar-protocol.html#_click_events */
-  onEvent: ({event: {name, button}, dispatch}) => {
-    if (name === "username" && button === 1) {
+  onEvent: ({event: {name, button, modifiers, x, y, relative_y, relative_y, output_x, output_y, width, height}, dispatch}) => {
+    if (name === "username" && button === 1 && modifiers.length === 0) {
       dispatch({
         name: "USERNAME_TOGGLE_FULL_TEXT"
       });
