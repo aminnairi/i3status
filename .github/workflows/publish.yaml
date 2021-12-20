@@ -14,10 +14,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Dependencies installation
         run: docker-compose run --rm --user root -T npm install
+      - name: Test
+        run: docker-compose run --rm --user root -T npm test
       - name: Build
         run: docker-compose run --rm --user root -T npm run build
       - name: Pack
         run: docker-compose run --rm --user root -T npm pack
+      - name: Archive check
+        run: 'tar -tf *.tgz | wc -l | grep 4'
       - name: LICENSE check
         run: 'tar -tf *.tgz | grep "^package/LICENSE$"'
       - name: package.json check
