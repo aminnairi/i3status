@@ -24,7 +24,11 @@ Library to create your own i3 status bar in Node.js using the Flux architecture
 - Because it has no external dependencies.
 - Because it has been made with love.
 
-## Requirements
+## Instructions
+
+### Recommended
+
+#### Requirements
 
 - [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 - [GNU/Linux](https://en.wikipedia.org/wiki/Linux)
@@ -34,7 +38,7 @@ Library to create your own i3 status bar in Node.js using the Flux architecture
 - [NPM](https://www.npmjs.com/)
 - [i3wm](https://i3wm.org/)
 
-## Installation
+#### Installation
 
 Open a new terminal emulator and type the following commands.
 
@@ -72,6 +76,44 @@ Open the file `~/.config/i3/config` and replace the following option `status_com
 ```
 bar {
   status_command node ~/my-i3status/index.mjs
+}
+```
+
+In the same terminal emulator you just opened, type the following command.
+
+```bash
+i3-msg reload
+```
+
+### Manual
+
+#### Requirements
+
+- [JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+- [GNU/Linux](https://en.wikipedia.org/wiki/Linux)
+- [Terminal emulator](https://en.wikipedia.org/wiki/Terminal_emulator)
+- [Text editor](https://en.wikipedia.org/wiki/Text_editor)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [i3wm](https://i3wm.org/)
+
+#### Installation
+
+Open a new terminal emulator and type the following commands
+
+```bash
+git clone https://github.com/aminnairi/i3status ~/my-i3status
+cd ~/my-i3status
+docker-compose run --rm npm install
+docker-compose run --rm npm test
+docker-compose run --rm npm run build
+```
+
+Choose one of the example script (for instance, [`simple.mjs`](https://github.com/aminnairi/i3status/tree/production/examples/simple.mjs)) in the [`examples`](https://github.com/aminnairi/i3status/tree/production/examples) folder and replace the import path `@aminnairi/i3status` to `../build/index.mjs`. Then open the file `~/.config/i3/config` and replace the following option `status_command` if it already exists, or add it to the `bar` block.
+
+```
+bar {
+  status_command node ~/my-i3status/example/simple.mjs
 }
 ```
 

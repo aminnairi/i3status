@@ -20,12 +20,24 @@ cd ~/i3status
 
 ## Dependencies installation
 
+This will install dependencies in the `node_modules` folder based on the [`package.json`](https://github.com/aminnairi/i3status/tree/production/package.json) file.
+
 ```bash
 docker-compose run --rm npm install
 ```
 
 ## Test
 
+This will check if the integration tests are passing.
+
 ```bash
 docker-compose run --rm npm test
+```
+
+## Build
+
+This will build the optimized files in the `build` folder.
+
+```bash
+docker-compose run --rm npm run build
 ```
