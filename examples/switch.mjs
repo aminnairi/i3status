@@ -1,7 +1,7 @@
 import {userInfo} from "os";
 import {createInterface} from "readline/promises";
 import {stdin as input, stdout as output} from "process";
-import {createRenderer} from "../index.mjs";
+import {createRenderer} from "@aminnairi/i3status";
 
 const getDate = () => new Date().toLocaleDateString("en-US");
 const getTime = () => new Date().toLocaleTimeString("en-US");
