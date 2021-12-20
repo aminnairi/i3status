@@ -16,7 +16,7 @@ Library to create your own i3 status bar in Node.js using the Flux architecture
 - Because it is tested from integration to end-to-end.
 - Because it is powered by the Node.js platform and all of its operating system's API and ecosystem.
 - Because it allows you to build complex, dynamic status bars with ease.
-- Because it does not require any global installation needed (but you can if you want).
+- Because it does not require any global installation (but you can if you want).
 - Because it does not require any yaml, env files, and is just plain JavaScript, nothing else.
 - Because it has full support for asynchronous updates through dispatches.
 - Because it has full support for i3wm click events (buttons, modfiiers, coordinates, ...).
