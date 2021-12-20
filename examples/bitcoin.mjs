@@ -37,21 +37,7 @@ const getBitcoinPrice = () => {
   });
 };
 
-const getUsername = () => {
-  const userInformations = userInfo();
-
-  if (!Object.prototype.hasOwnProperty.call(userInformations, "username")) {
-    return "unknown";
-  }
-
-  const {username} = userInformations;
-
-  if (typeof username !== "string") {
-    return "unknown";
-  }
-
-  return username;
-};
+const getUsername = () => userInfo().username;
 
 const render = createRenderer({
   createInterface,
