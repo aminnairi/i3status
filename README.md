@@ -6,6 +6,23 @@ Library to create your own i3 status bar in Node.js using the Flux architecture
 
 ![Status Bar](https://user-images.githubusercontent.com/18418459/146653832-246fe8e9-b680-47ac-8c90-6fe7fbf1a121.png)
 
+## Why
+
+- Because it is inspired by The Elm Architecture, Redux, and the Flux architecture.
+- Because it is written using modern ECMAScript syntax.
+- Because it is written using modern ECMAScript Modules.
+- Because it is written with functional programming in mind.
+- Because it is well documented with many examples (and many to come).
+- Because it is tested from integration to end-to-end.
+- Because it is powered by the Node.js platform and all of its operating system's API and ecosystem.
+- Because it allows you to build complex, dynamic status bars with ease.
+- Because it does not require any global installation (but you can if you want).
+- Because it does not require any yaml, env files, and is just plain JavaScript, nothing else.
+- Because it has full support for asynchronous updates through dispatches.
+- Because it has full support for i3wm click events (buttons, modfiiers, coordinates, ...).
+- Because it has full supports for i3wm blocks configuration (color, padding, separator, ...).
+- Because it has no external dependencies.
+- Because it has been made with love.
 
 ## Requirements
 
