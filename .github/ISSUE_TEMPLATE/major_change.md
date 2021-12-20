@@ -1,13 +1,13 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: New feature for...
+name: Major change
+about: Major change that adds breaking changes
+title: New breaking change for...
 labels: enhancement
 assignees: aminnairi
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
+**Is this breaking change related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
 **Describe the solution you'd like**
