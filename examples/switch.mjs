@@ -25,7 +25,7 @@ const dispatch = render({
       full_text: getUsername()
     }
   ],
-  onEvent: ({event: {name, button, modifiers}, dispatch}) => {
+  onEvent: ({event: {name, button, modifiers, x, y, relative_y, relative_y, output_x, output_y, width, height}, dispatch}) => {
     if (name === "datetime" && button === 1 && modifiers.length === 0) {
       dispatch({
         name: "TOGGLE_DATETIME_STATE",
